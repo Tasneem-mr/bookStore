@@ -16,9 +16,10 @@
 
         .account-block {
             padding: 0;
-            background-image: url(https://bootdey.com/img/Content/bg1.jpg);
+            background-image: url(images/images.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            opacity: 0.8;
             height: 100%;
             position: relative;
         }
@@ -55,6 +56,25 @@
             border-color: #5369f8;
             color: #fff;
         }
+
+        #login-error-msg-holder {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        #login-error-msg {
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #8a0000;
+            background-color: #e58f8f;
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -70,17 +90,22 @@
                                     <div class="mb-5">
                                         <h3 class="h4 font-weight-bold text-theme">Login</h3>
                                     </div>
-
-                                    <form>
+                                    <div id="login-error-msg-holder">
+                                        <p id="login-error-msg">Invalid username and/or
+                                            password</span></p>
+                                    </div>
+                                    <form id="login-form">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1">
+                                            <label for="username">Username</label>
+                                            <input type="text" name="username" id="username-field"
+                                                class="login-form-field form-control" placeholder="Username">
                                         </div>
                                         <div class="form-group mb-5">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" id="password-field"
+                                                class="form-control" placeholder="Password">                                   
                                         </div>
-                                        <button type="submit" class="btn btn-theme">Login</button>
+                                        <input type="submit" value="Login" id="login-form-submit" class="btn btn-theme">
                                         <a href="#l" class="forgot-link float-right text-primary">Forgot password?</a>
                                     </form>
                                 </div>
@@ -108,6 +133,33 @@
             </div>
         </div>
     </div>
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+        const loginErrorMsg = document.getElementById("login-error-msg");
+
+        loginButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            const username = loginForm.username.value;
+            const password = loginForm.password.value;
+
+            var usernames = ["tasneem", "batul", "yamam", "majd"];
+            var passwords = ["pass1", "pass2", "pass3", "pass4"];
+            var didLogin = false;
+
+            for (var i = 0; i < usernames.length; i++) {
+                if (username === usernames[i] && password === passwords[i]) {
+                    alert("You have successfully logged in.");
+                    location.reload();
+                    didLogin = true;
+                }
+            }
+            if (didLogin === false) {
+                loginErrorMsg.style.opacity = 1;
+            }
+
+        })
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
