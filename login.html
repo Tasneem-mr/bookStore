@@ -7,132 +7,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <title>Book store</title>
-    <style>
-        body {
-            margin-top: 20px;
-            background: #f6f9fc;
-        }
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
 
-        .account-block {
-            padding: 0;
-            background-image: url(images/images.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: 0.8;
-            height: 100%;
-            position: relative;
-        }
-
-        .account-block .overlay {
-            -webkit-box-flex: 1;
-            -ms-flex: 1;
-            flex: 1;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .account-block .account-testimonial {
-            text-align: center;
-            color: #fff;
-            position: absolute;
-            margin: 0 auto;
-            padding: 0 1.75rem;
-            bottom: 3rem;
-            left: 0;
-            right: 0;
-        }
-
-        .text-theme {
-            color: #5369f8 !important;
-        }
-
-        .btn-theme {
-            background-color: #5369f8;
-            border-color: #5369f8;
-            color: #fff;
-        }
-
-        #login-error-msg-holder {
-            width: 100%;
-            height: 100%;
-            display: grid;
-            justify-items: center;
-            align-items: center;
-        }
-
-        #login-error-msg {
-            text-align: center;
-            margin: 0;
-            padding: 5px;
-            font-size: 12px;
-            font-weight: bold;
-            color: #8a0000;
-            background-color: #e58f8f;
-            opacity: 0;
-        }
-    </style>
+    <title>Book store login</title>
 </head>
 
 <body>
-    <div id="main-wrapper" class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-10">
-                <div class="card border-0">
-                    <div class="card-body p-0">
-                        <div class="row no-gutters">
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="mb-5">
-                                        <h3 class="h4 font-weight-bold text-theme">Login</h3>
-                                    </div>
-                                    <div id="login-error-msg-holder">
-                                        <p id="login-error-msg">Invalid username and/or
-                                            password</span></p>
-                                    </div>
-                                    <form id="login-form">
-                                        <div class="form-group">
-                                            <label for="username">Username</label>
-                                            <input type="text" name="username" id="username-field"
-                                                class="login-form-field form-control" placeholder="Username">
-                                        </div>
-                                        <div class="form-group mb-5">
-                                            <label for="password">Password</label>
-                                            <input type="password" name="password" id="password-field"
-                                                class="form-control" placeholder="Password">                                   
-                                        </div>
-                                        <input type="submit" value="Login" id="login-form-submit" class="btn btn-theme">
-                                        <a href="#l" class="forgot-link float-right text-primary">Forgot password?</a>
-                                    </form>
-                                </div>
-                            </div>
+    <!--logo, navbar and shopping cart -->
+    <header>
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-50">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">
+                        <img src="img/photo_2022-04-12_15-49-51.jpg" class="d-inline-block align-top"
+                            style="margin-top: -1px;" alt="" width="60" height="40" ;> <b> Our Book
+                            Store</b>
+                    </a>
 
-                            <div class="col-lg-6 d-none d-lg-inline-block">
-                                <div class="account-block rounded-right">
-                                    <div class="overlay rounded-right"></div>
-                                    <div class="account-testimonial">
-                                        <h4 class="text-white mb-4">Reading opens doors!</h4>
-                                        <p class="lead text-white">“The more that you read, the more things you will
-                                            know. The more that you learn, the more places you'll go.”</p>
-                                        <p> <a href="https://parade.com/1039651/marynliles/dr-seuss-quotes/"> <cite>Dr.
-                                                    Seuss</cite> </a></p>
-                                    </div>
-                                </div>
+                    <form class="d-flex input-group w-50 ">
+                        <input type="search" class="form-control rounded " placeholder="Search books, authors"
+                            aria-label="Search" aria-describedby="search-addon" style="background-color: #c6c2c3;" />
+                        <span class="input-group-text border-0" id="search-addon" style="color:#090909 ;">
+                            <a href="" style="color: #380303;"><i class="fas fa-search"></i></a>
+                        </span>
+                    </form>
+
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-primary px-3 me-2" style="color:beige;">
+                            Login
+                        </button>
+                        <button type="button" class="btn btn-primary px-2 me-3" style="color:beige;">
+                            Sign up
+                        </button>
+                        <div class="shopping-cart">
+                            <div class="sum-prices">
+                                <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                                <!--The total prices of products in the shopping cart -->
+                                <h6 id="sum-prices"></h6>
                             </div>
                         </div>
+                        <!-- cart -->
+                        <div class="producstOnCart hide">
+                            <div class="overlay"></div>
+                            <div class="top">
+                                <button id="closeButton">
+                                    <i class="fas fa-times-circle"></i>
+                                </button>
+                                <h3>Cart</h3>
+                            </div>
+                            <ul id="buyItems">
+                                <h4 class="empty">Your shopping cart is empty</h4>
 
+                            </ul>
+                            <button class="btn btn-primary checkout hidden">Check out</button>
+                        </div>
                     </div>
                 </div>
+            </nav>
 
-                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="register.html"
-                        class="text-primary ml-1">register</a></p>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-30">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item"><a href="#popularSubjects" class="nav-link">Popular Subjects</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Fiction</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Non-Fiction</a></li>
+                            <li class="nav-item"><a href="#bestSellers" class="nav-link">Best Sellers</a></li>
+                            <li class="nav-item"><a href="#newReleases" class="nav-link">New Releases</a></li>
+                        </ul>
+                    </div>
+
+            </nav>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div id="main-wrapper" class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="card border-0">
+                        <div class="card-body p-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-6">
+                                    <div class="p-5">
+                                        <div class="mb-5">
+                                            <h3 class="h4 font-weight-bold text-theme">Login</h3>
+                                        </div>
+                                        <div id="login-error-msg-holder">
+                                            <p id="login-error-msg">Invalid username and/or
+                                                password</span></p>
+                                        </div>
+                                        <form id="login-form">
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" name="username" id="username-field"
+                                                    class="login-form-field form-control" placeholder="Username">
+                                            </div>
+                                            <div class="form-group mb-5">
+                                                <label for="password">Password</label>
+                                                <input type="password" name="password" id="password-field"
+                                                    class="form-control" placeholder="Password">
+                                            </div>
+                                            <input type="submit" value="Login" id="login-form-submit"
+                                                class="btn btn-theme">
+                                            <a href="#l" class="forgot-link float-right text-primary">Forgot
+                                                password?</a>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 d-none d-lg-inline-block">
+                                    <div class="account-block rounded-right">
+                                        <div class="overlay rounded-right"></div>
+                                        <div class="account-testimonial">
+                                            <h4 class="text-white mb-4">Reading opens doors!</h4>
+                                            <p class="lead text-white">“The more that you read, the more things you will
+                                                know. The more that you learn, the more places you'll go.”</p>
+                                            <p> <a href="https://parade.com/1039651/marynliles/dr-seuss-quotes/">
+                                                    <cite>Dr.
+                                                        Seuss</cite> </a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="register.html"
+                            class="text-primary ml-1">register</a></p>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="navbar-dark bg-danger bg-opacity-50 text-center">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;"
+                    href="https://www.facebook.com/" role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!"
+                    role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                    role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                    role="button"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #34e96a9d;" href="#!"
+                    role="button"><i class="fab fa-whatsapp"></i>
+                </a>
+                <!-- Github -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                    role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+
+
+        <nav class="navbar navbar-expand navbar-light badge-danger">
+            <div class="container-fluid justify-content-center ">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="" style="color: rgb(9, 9, 9);">© 2022 All Rights
+                            Reserved</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="" style="color: #090909;">Terms of Use</a></li>
+                    <li class="nav-item"><a class="nav-link" href="" style="color: #090909;">Privacy Notice</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
     <script>
         const loginForm = document.getElementById("login-form");
         const loginButton = document.getElementById("login-form-submit");
@@ -161,12 +232,10 @@
         })
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="shoppingCart.js"></script>
 </body>
 
 </html>
