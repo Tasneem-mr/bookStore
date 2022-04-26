@@ -9,6 +9,10 @@
    font-family: "Titillium Web", sans-serif;
    list-style-type: none;
 }
+body {
+        
+   background: #fcefd3e3;
+}
 
 .shopping-cart {
    margin-left: 10px;
@@ -62,15 +66,7 @@
    display: block;
    scrollbar-width: thin;
 }
-.producstOnCart::-webkit-scrollbar-track{
-    background: #f1f1f1; 
-}
-.producstOnCart::-webkit-scrollbar-thumb{
-    background: #888;
-}
-.producstOnCart::-webkit-scrollbar-thumb:hover{
-    background: #555;
-}
+
 
 @keyframes fade {
    0% {
@@ -223,11 +219,35 @@
         font: 1.5em sans-serif ;
         font: caption ;
     }
-    /* login bage */
-    body {
-      margin-top: 20px;
-      background: #f6f9fc;
+    /* login and register pages */
+  main{
+     margin: 10%;
+     background-color: rgba(243, 190, 199, 0.37);
   }
+      
+
+  .account-block1 {
+   padding: 0;
+   background-image: url(images/download.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   opacity: 0.8;
+   height: 100%;
+   position: relative;
+}
+
+
+.account-block1 .account-testimonial {
+   text-align: center;
+   color: #fff;
+   position: absolute;
+   margin: 0 auto;
+   padding: 0 1.75rem;
+   bottom: 3rem;
+   left: 0;
+   right: 0;
+}
+
 
   .account-block {
       padding: 0;
@@ -239,17 +259,6 @@
       position: relative;
   }
 
-  .account-block .overlay {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-  }
 
   .account-block .account-testimonial {
       text-align: center;
@@ -263,14 +272,9 @@
   }
 
   .text-theme {
-      color: #5369f8 !important;
+      color: #5369f8 ;
   }
 
-  .btn-theme {
-      background-color: #5369f8;
-      border-color: #5369f8;
-      color: #fff;
-  }
 
   #login-error-msg-holder {
       width: 100%;

@@ -122,3 +122,30 @@ const closeShopCart = document.querySelector('#closeButton');
 const overlay = document.querySelector('.overlay');
 closeShopCart.addEventListener('click', closeCart);
 overlay.addEventListener('click', closeCart);
+
+// login
+const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("login-form-submit");
+const loginErrorMsg = document.getElementById("login-error-msg");
+
+loginButton.addEventListener("click", (e) => {
+	e.preventDefault();
+	const username = loginForm.username.value;
+	const password = loginForm.password.value;
+
+	var usernames = ["tasneem", "batul", "yamam", "majd"];
+	var passwords = ["pass1", "pass2", "pass3", "pass4"];
+	var didLogin = false;
+
+	for (var i = 0; i < usernames.length; i++) {
+		if (username === usernames[i] && password === passwords[i]) {
+			alert("You have successfully logged in.");
+			location.reload();
+			didLogin = true;
+		}
+	}
+	if (didLogin === false) {
+		loginErrorMsg.style.opacity = 1;
+	}
+
+})
