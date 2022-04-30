@@ -17,7 +17,7 @@ body {
 .shopping-cart {
    margin-left: 10px;
    font-size: 1.4rem;
-   color: rgb(12, 14, 17);
+   color: rgb(239, 242, 247);
 }
 
 .shopping-cart .sum-prices {
@@ -40,7 +40,7 @@ body {
 }
 
 .shoppingCartButton:hover  {
-   color: #0e5e53;
+   color: #eb0a0a;
 }
 
 .producstOnCart {
@@ -50,7 +50,7 @@ body {
    overflow-y: scroll;
    scroll-behavior: smooth;
    overscroll-behavior: contain;
-   background-color: white;
+   background-color: rgba(167, 158, 158, 0.966);
    width: 300px;
    height: 500px;
    color: #0a4eb4;
@@ -64,7 +64,7 @@ body {
 
 .producstOnCart::-webkit-scrollbar {
    display: block;
-   scrollbar-width: thin;
+  background: rgba(100, 100, 104, 0.788);
 }
 
 
@@ -75,11 +75,6 @@ body {
    100% {
        transform: none;
    }
-}
-
-.producstOnCart::-webkit-scrollbar {
-   width: thin;
-   background: transparent;
 }
 
 .hide {
