@@ -119,9 +119,9 @@ openShopCart.addEventListener('click', () => {
 
 
 const closeShopCart = document.querySelector('#closeButton');
-const overlay = document.querySelector('.overlay');
+// const overlay = document.querySelector('.overlay');
 closeShopCart.addEventListener('click', closeCart);
-overlay.addEventListener('click', closeCart);
+// overlay.addEventListener('click', closeCart);
 
 // login
 const loginForm = document.getElementById("login-form");
