@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <title>Book Store</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+  <header>
+    <div class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-50">
+        <div class="container-fluid">
+          <a href="bookStore.html" class="navbar-brand">
+            <img src="images/logo.jpg" class="d-inline-block align-top" style="margin-top: -1px;" alt="" width="60"
+              height="40"> <b> Our Book
+              Store</b>
+          </a>
+
+          <form class="d-flex input-group w-50 ">
+            <input type="search" class="form-control rounded " placeholder="Search books, authors" aria-label="Search"
+              aria-describedby="search-addon" style="background-color: #c6c2c3;" />
+            <span class="input-group-text border-0" id="search-addon" style="color:#090909 ;">
+              <a href="" style="color: #380303;"><i class="fas fa-search"></i></a>
+            </span>
+          </form>
+
+          <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-primary px-3 me-2">
+              <a href="login.html" style="color:beige;"> Login</a>
+            </button>
+            <button type="button" class="btn btn-primary px-2 me-3">
+              <a href="register.html" style="color:beige;">Sign up</a>
+            </button>
+            <div class="shopping-cart">
+              <div class="sum-prices">
+                <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                <!--The total prices of products in the shopping cart -->
+                <h6 id="sum-prices"></h6>
+              </div>
+            </div>
+            <!-- cart -->
+            <div class="producstOnCart hide">
+              <div class="top">
+                <button id="closeButton">
+                  <i class="fas fa-times-circle"></i>
+                </button>
+                <h3>Cart</h3>
+              </div>
+              <ul id="buyItems">
+                <h4 class="empty">Your shopping cart is empty</h4>
+
+              </ul>
+              <button class="btn btn-primary checkout hidden">Check out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-30">
+        <div class="container-fluid">
+
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ">
+              <li class="nav-item"><a href="#popularSubjects" class="nav-link">Popular Subjects</a></li>
+              <li class="nav-item"><a href="sections.html" class="nav-link">Fiction</a></li>
+              <li class="nav-item"><a href="sections.html" class="nav-link">Non-Fiction</a></li>
+              <li class="nav-item"><a href="#bestSellers" class="nav-link">Best Sellers</a></li>
+              <li class="nav-item"><a href="#newReleases" class="nav-link">New Releases</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="container" style="max-width: 100%;  margin-top: 10%;">
+    <div class="display-flex">
+      <div class="card mb-3" style="max-width: 1200;">
+        <div class="row g-0 product-under">
+          <div class="col-md-4 ">
+            <img src="images/1.jpeg" class="img-fluid rounded-first border border-dark" alt="book name">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body text-left ">
+              <h1 class="card-title productName" style="font-family:cursive; font-weight: 800; margin-top: -30px;">Book
+                Name</h1>
+              <p class="card-text text-left"
+                style="font-weight: 400; font-size: 1.5rem; font-family:cursive; margin-bottom:-2px;">Discrition about
+                the book:</p>
+              <p class="text-left" style="font-family: Time New Roman; font-size:1.2rem;">In fierce, agile poems, Felon
+                tells the story of the effects of incarceration--canvassing a wide range of emotions and experiences
+                through homelessness, underemployment, love, drug abuse, domestic violence, fatherhood, and grace--and,
+                in doing so, creates a travelogue for an imagined life. Reginald Dwayne Betts confronts the funk of
+                post-incarceration existence in traditional and newfound forms, from revolutionary found poems created
+                by redacting court documents to the astonishing crown of sonnets.</p>
+              <p class="text-left"
+                style="font-size: 1.5rem; font-family:cursive; margin-bottom: -3px; margin-top: -15px;">product details:
+              </p>
+              <p class="text-left" style="font-family:Times New Roman; font-size: 1.2rem;"> price: <span class="price priceValue">13</span> $<br>publisher:<br>
+                publisher date:<br> pages:<br> author name:</p>
+              <p class="text-left"
+                style="font-size: 1.5rem; font-family: cursive;margin-bottom: -3px; margin-top: -15px;">About the
+                Author:</p>
+              <p class="text-left" style="font-family: times new roman; font-size: 1.2rem;"> Reginald Dwayne Betts is
+                the author of Felon, a New York Times Notable Book, and founder of Freedom Reads. He lives in New Haven,
+                CT.</p>
+              <div class="btn btn-primary btn-lg addToCart" data-product-id="13"
+                style="font-size: 1rem; font-family: times new roman;"> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                </svg> ADD TO CART</div>
+              <div class="btn btn-primary btn-lg " 
+                style="font-size: 1rem; font-family: times new roman;"> <svg xmlns="http://www.w3.org/2000/svg"
+                  width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                  <path
+                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                </svg> ADD TO WISHLEST</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="navbar-dark bg-danger bg-opacity-50 text-center">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/"
+          role="button"><i class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+            class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+            class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+            class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #34e96a9d;" href="#!" role="button"><i
+            class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Github -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
+            class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+
+
+    <nav class="navbar navbar-expand navbar-light badge-danger">
+      <div class="container-fluid justify-content-center ">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="" style="color: rgb(9, 9, 9);">© 2022 All Rights Reserved</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="" style="color: #090909;">Terms of Use</a></li>
+          <li class="nav-item"><a class="nav-link" href="" style="color: #090909;">Privacy Notice</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+  <script type="text/javascript" src="shoppingCart.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
