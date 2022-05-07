@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheet.css">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+            integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+    <title>Book store register</title>
+
+    <style>
+      h1{
+        text-align: center;
+        text-shadow: 0px 2px 2px rgb(223, 11, 170);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 60px;
+        margin-top: 150px;
+        
+      }
+
+    </style>
+
+</head>
+
+<body>
+        <!--logo, navbar and shopping cart -->
+        <header>
+            <div class="fixed-top">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-50">
+                    <div class="container-fluid">
+                        <a href="book store .html" class="navbar-brand">
+                            <img src="images/logo.jpg" class="d-inline-block align-top"
+                                style="margin-top: -1px;" alt="" width="60" height="40" ;> <b> Our Book
+                                Store</b>
+                        </a>
+    
+                        <form class="d-flex input-group w-50 ">
+                            <input type="search" class="form-control rounded " placeholder="Search books, authors"
+                                aria-label="Search" aria-describedby="search-addon" style="background-color: #c6c2c3;" />
+                            <span class="input-group-text border-0" id="search-addon" style="color:#090909 ;">
+                                <a href="" style="color: #380303;"><i class="fas fa-search"></i></a>
+                            </span>
+                        </form>
+    
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-primary px-3 me-2" style="color:beige;">
+                                <a href="login.html" style="color:beige;"> Login</a>
+                            </button>
+                            <button type="button" class="btn btn-primary px-2 me-3" >
+                             <a href="register.html" style="color:beige;">Sign up</a> 
+                            </button>
+                            <div class="shopping-cart">
+                                <div class="sum-prices">
+                                    <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                                    <!--The total prices of products in the shopping cart -->
+                                    <h6 id="sum-prices"></h6>
+                                </div>
+                            </div>
+                            <!-- cart -->
+                            <div class="producstOnCart hide">
+                                <div class="overlay"></div>
+                                <div class="top">
+                                    <button id="closeButton">
+                                        <i class="fas fa-times-circle"></i>
+                                    </button>
+                                    <h3>Cart</h3>
+                                </div>
+                                <ul id="buyItems">
+                                    <h4 class="empty">Your shopping cart is empty</h4>
+    
+                                </ul>
+                                <button class="btn btn-primary checkout hidden">Check out</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+    
+    
+                <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-opacity-30">
+                    <div class="container-fluid">
+    
+                        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item"><a href="#popularSubjects" class="nav-link">Popular Subjects</a></li>
+                                <li class="nav-item"><a href="sections.html" class="nav-link">Fiction</a></li>
+                                <li class="nav-item"><a href="sections.html" class="nav-link">Non-Fiction</a></li>
+                                <li class="nav-item"><a href="#bestSellers" class="nav-link">Best Sellers</a></li>
+                                <li class="nav-item"><a href="#newReleases" class="nav-link">New Releases</a></li>
+                            </ul>
+                        </div>
+    
+                </nav>
+            </div>
+            </div>
+        </header>
+
+
+        <h1>Non-Fiction</h1>
+      
+      <div class="container">
+        
+      <div class="row gy-4 my-4">
+  
+      <div class="col-sm-8 col-md-5 col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="images\pc11.jpg" style="width:15rem;" class="card-img-top h-50" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h6 class="price">
+                $<span class="priceValue">33</span>
+              </h6>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary addToCart" data-product-id="1">Add to cart</a>
+              </div>
+            
+            </div>
+          </div>
+      </div>
+  
+      <div class="col-sm-8 col-md-5 col-lg-4">
+        <div class="card">
+          <img class="card-img-top" src="images\pc12.jpg" style="width:15rem;" class="card-img-top h-50" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h6 class="price">
+              $<span class="priceValue">36</span>
+            </h6>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary addToCart" data-product-id="1">Add to cart</a>
+            </div>
+          
+          </div>
+        </div>
+    </div>
+  
+    <div class="col-sm-8 col-md-5 col-lg-4">
+      <div class="card">
+        <img class="card-img-top" src="images\pc13.jpg" style="width:15rem;" class="card-img-top h-50" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h6 class="price">
+            $<span class="priceValue">17</span>
+          </h6>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary addToCart" data-product-id="1">Add to cart</a>
+          </div>
+        
+        </div>
+      </div>
+  </div>
+      </div>
+      <div class="row gy-4 my-4">
+  <div class="col-sm-8 col-md-5 col-lg-4">
+    <div class="card">
+      <img class="card-img-top" src="images\pc14.jpg" style="width:15rem;" class="card-img-top h-50" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h6 class="price">
+          $<span class="priceValue">41</span>
+        </h6>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary addToCart" data-product-id="1">Add to cart</a>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="col-sm-8 col-md-5 col-lg-4">
+    <div class="card">
+      <img class="card-img-top" src="images\pc15.jpg" style="width:15rem;" class="card-img-top h-50" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h6 class="price">
+          $<span class="priceValue">43</span>
+        </h6>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary addToCart" data-product-id="1">Add to cart</a>
+        </div>
+     
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-8 col-md-5 col-lg-4">
+    <div class="card">
+      <img class="card-img-top" src="images\pc16.jpg" style="width:15rem;" class="card-img-top h-50" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h6 class="price">
+          $<span class="priceValue">25</span>
+        </h6>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary addToCart" data-product-id="1">Add to cart</a>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  </div>
+  
+      </div>
+
+
+
+      <footer class="navbar-dark bg-danger bg-opacity-50 text-center">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/"
+              role="button"><i class="fab fa-facebook-f"></i></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+                class="fab fa-twitter"></i></a>
+    
+            <!-- Google -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+                class="fab fa-google"></i></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #34e96a9d;" href="#!" role="button"><i
+                class="fab fa-whatsapp"></i>
+            </a>
+            <!-- Github -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
+                class="fab fa-github"></i></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+    
+    
+        <nav class="navbar navbar-expand navbar-light badge-danger">
+          <div class="container-fluid justify-content-center ">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="" style="color: rgb(9, 9, 9);">© 2022 All Rights Reserved</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="" style="color: #090909;">Terms of Use</a></li>
+              <li class="nav-item"><a class="nav-link" href="" style="color: #090909;">Privacy Notice</a></li>
+            </ul>
+          </div>
+        </nav>
+      </footer>
+    
+    
+    
+    
+    
+      <!-- MDB -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
+      <script type="text/javascript" src="shoppingCart.js"></script>
+    
+    
+    </body>
+    
+    </html>
